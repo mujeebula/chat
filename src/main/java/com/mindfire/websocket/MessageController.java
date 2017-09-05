@@ -44,13 +44,14 @@ public class MessageController {
 	/**
 	 * This method is called when a user is logged in to send all its contact
 	 * and details.
-	 * @param user
-	 * @param sessionId 
+	 * @param user Logged in user
+	 * @param sessionId SessionId of the user
 	 * @throws Exception
 	 */
 	
 	@MessageMapping("/init")
 	public void init(User user, @Header("simpSessionId") String sessionId) throws Exception {
+		//put this user into HashMap along with sessionId
 		hm.put(user.getUsername(), sessionId);
 		user = userRepository.findByUsername(user.getUsername());
 		System.out.println("Logged in:" + user.toString());
@@ -67,8 +68,8 @@ public class MessageController {
 	/**
 	 * This method returns all the messages exchanged between Sender and Receiver in
 	 * sorted order.
-	 * @param senderReceiver
-	 * @param sessionId
+	 * @param senderReceiver Pair of user names for sender and receiver
+	 * @param sessionId SessionId of the user
 	 * @throws Exception
 	 */
 
@@ -91,8 +92,8 @@ public class MessageController {
 	/**
 	 * Used to search the user name database.
 	 * It returns all the contacts whose user name contains the keyword.
-	 * @param keyword
-	 * @param sessionId
+	 * @param keyword Keyword for search query
+	 * @param sessionId sessionId of the user
 	 * @throws Exception
 	 */
 	
@@ -109,6 +110,7 @@ public class MessageController {
 				break;
 			}
 		}
+		//TODO convert it into sql
 		List<Contact> userContacts = contactRepository.findByUserId(user.getUserId());
 		List<User> filteredUsers = new ArrayList<>();
 		for (Contact contact : userContacts) {
@@ -128,7 +130,7 @@ public class MessageController {
 
 	/**
 	 * This method handles the private message send to a user.
-	 * @param message
+	 * @param message Message to be sent
 	 */
 	
 	@MessageMapping("/message")
@@ -144,7 +146,7 @@ public class MessageController {
 	
 	/**
 	 * It adds a contact in database.
-	 * @param contact
+	 * @param contact Contact to be added
 	 */
 	
 	@MessageMapping("/addContact")
