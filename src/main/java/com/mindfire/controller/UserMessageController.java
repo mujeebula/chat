@@ -11,12 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mindfire.entity.Message;
 import com.mindfire.repository.MessageRepository;
-import com.mindfire.util.Response;
 
 @RestController
 public class UserMessageController {
 
-	@Autowired
+	/*@Autowired
 	private MessageRepository messageRepository;
 	
 	//send message to a user Message has senderId , receiverId
@@ -38,5 +37,5 @@ public class UserMessageController {
 			@PathVariable("receiverId") Long receiverId) {
 		List<Message> msgs = messageRepository.findBySenderIdAndReceiverIdOrderByCreated(senderId, receiverId);
 		return msgs;
-	}
+	}*/
 }

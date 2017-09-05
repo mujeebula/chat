@@ -9,12 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mindfire.entity.User;
 import com.mindfire.repository.UserRepository;
-import com.mindfire.util.Response;
 
 @RestController
 public class SignupController {
 
-	@Autowired
+	/*@Autowired
 	UserRepository userRepository;
 
 	@RequestMapping(value = "/signup", method = RequestMethod.POST)
@@ -33,5 +32,5 @@ public class SignupController {
 		} else {
 			return new Response("FAIL");
 		}
-	}
+	}*/
 }

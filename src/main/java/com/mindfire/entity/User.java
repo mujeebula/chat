@@ -12,19 +12,12 @@ public class User extends AbstractTimestampEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	private Long userId;
 	private String firstName;
 	private String lastName;
 	@Column(unique = true, nullable = false)
 	private String username;
-	private String password;
 
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
 
 	public Long getId() {
 		return id;
@@ -61,7 +54,16 @@ public class User extends AbstractTimestampEntity {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", username=" + username
-				+ ", password=" + password + "]";
+				+ "]";
 	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
 
 }

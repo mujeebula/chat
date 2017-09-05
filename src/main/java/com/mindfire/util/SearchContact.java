@@ -1,8 +1,8 @@
-package com.mindfire.entity;
+package com.mindfire.util;
 
 public class SearchContact{
 	public String username;
-	public String data;
+	public String keyword;
 	
 	public String getUsername() {
 		return username;
@@ -11,9 +11,9 @@ public class SearchContact{
 		this.username = username;
 	}
 	public String getData() {
-		return data;
+		return keyword;
 	}
 	public void setData(String data) {
-		this.data = data;
+		this.keyword = data;
 	}
 }

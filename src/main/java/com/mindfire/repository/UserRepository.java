@@ -9,9 +9,8 @@ import com.mindfire.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-	User findByUsernameAndPassword(String username, String password);
-
 	User findByUsername(String username);
-
 	List<User> findByUsernameContaining(String data);
+	User findByUserId(Long contactId);
+	List<User> findByUsernameContainingAndUsernameNotIn(String keyword, boolean add);
 }

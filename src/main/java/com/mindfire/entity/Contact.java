@@ -13,6 +13,13 @@ public class Contact extends AbstractTimestampEntity {
 	private Long id;
 	private Long userId;
 	private Long contactId;
+	
+	public Contact() {}
+	
+	public Contact(Long userId, Long contactId) {
+		this.userId = userId;
+		this.contactId = contactId;
+	}
 
 	public Long getId() {
 		return id;

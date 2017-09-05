@@ -19,26 +19,4 @@ public class LoginController {
 		ModelAndView mav = new ModelAndView("login");
 		return mav;
 	}
-
-/*	@RequestMapping(value = "/loginProcess", method = RequestMethod.POST)
-	public ModelAndView loginProcess(HttpServletRequest request, HttpServletResponse response,
-			@ModelAttribute("user") User user) {
-		ModelAndView mav = null;
-		user = userRepository.findByUserNameAndPassword(user.getUserName(), user.getPassword());
-		if (null != user) {
-			mav = new ModelAndView("welcome");
-		} else {
-			mav = new ModelAndView("login");
-		}
-		return mav;
-	}*/
-
-/*	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public Response login(@RequestBody User user) {
-		if (userRepository.findByUserNameAndPassword(user.getUserName(), user.getPassword()) != null) {
-			return new Response("HOME");
-		} else {
-			return new Response("LOGIN");
-		}
-	}*/
 }

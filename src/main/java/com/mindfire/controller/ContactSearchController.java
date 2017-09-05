@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mindfire.entity.SearchContact;
 import com.mindfire.entity.User;
 import com.mindfire.repository.UserRepository;
+import com.mindfire.util.SearchContact;
 
 @RestController
 public class ContactSearchController {
@@ -20,6 +20,6 @@ public class ContactSearchController {
 	
 	@RequestMapping(value = "/contactSearch", method=RequestMethod.POST)
 	public List<User> contactSearch(@RequestBody SearchContact contact) {
-		return userRepository.findByUsernameContaining(contact.data);
+		return userRepository.findByUsernameContaining(contact.keyword);
 	}
 }
