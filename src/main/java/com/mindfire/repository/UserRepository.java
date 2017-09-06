@@ -7,10 +7,15 @@ import org.springframework.stereotype.Repository;
 
 import com.mindfire.entity.User;
 
+/**
+ * Repository for User details
+ * @author
+ *
+ */
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface UserRepository extends JpaRepository<User, Long> {
+
 	User findByUsername(String username);
-	List<User> findByUsernameContaining(String data);
-	User findByUserId(Long contactId);
-	List<User> findByUsernameContainingAndUsernameNotIn(String keyword, boolean add);
+
+	List<User> findByUsernameContaining(String keyword);
 }

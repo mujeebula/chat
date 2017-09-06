@@ -5,14 +5,16 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.mindfire.entity.Conversation;
 import com.mindfire.entity.Message;
 
 /**
- * Repository for stored messages
+ * Repository for Conversation Entity
  * @author
  *
  */
 @Repository
-public interface MessageRepository extends JpaRepository<Message, Long>{
-	List<Message> findAllByConversationId(Long conversationId);
+public interface ConversationRepository extends JpaRepository<Conversation, Long> {
+
+	List<Message> findAllByconversationIdOrderByCreatedAt(Long conversationId);
 }
