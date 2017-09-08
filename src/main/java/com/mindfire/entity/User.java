@@ -11,7 +11,9 @@ import javax.persistence.SqlResultSetMapping;
 
 import com.mindfire.dto.ConversationIdAndNameDTO;
 
-/**
+/*
+ * User.java
+ * 
  * Entity for user details
  * @author
  *

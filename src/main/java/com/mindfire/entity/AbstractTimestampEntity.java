@@ -7,6 +7,12 @@ import javax.persistence.PrePersist;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+
+/*
+ * AbstractTimestampEntity.java
+ * 
+ * Parent class of other entities for time stamp field
+ */
 @MappedSuperclass
 public abstract class AbstractTimestampEntity {
 

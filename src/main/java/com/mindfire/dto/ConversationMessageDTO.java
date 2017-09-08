@@ -2,10 +2,11 @@ package com.mindfire.dto;
 
 import java.util.Date;
 
-/**
+/*
+ * ConversationMessageDTO.java
+ * 
  * A DTO used to send the message to user
  * @author
- *
  */
 public class ConversationMessageDTO  {
 

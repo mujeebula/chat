@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.mindfire.entity.Message;
 
-/**
+/*
+ * MessageRepository.java
+ * 
  * Repository for stored messages
  * @author
  *

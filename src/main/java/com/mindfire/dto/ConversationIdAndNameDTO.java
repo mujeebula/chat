@@ -1,8 +1,9 @@
 package com.mindfire.dto;
-/**
+/*
+ * ConversationIdAndNameDTO.java
+ * 
  * It is used to send the list of conversation user is involved in
  * @author
- *
  */
 public class ConversationIdAndNameDTO {
 	private Long conversationId;

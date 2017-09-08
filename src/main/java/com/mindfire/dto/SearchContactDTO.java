@@ -1,5 +1,12 @@
 package com.mindfire.dto;
 
+/*
+ * SearchContactDTO.java
+ * 
+ * A DTO used for searching contacts in the database
+ * @author
+ *
+ */
 public class SearchContactDTO{
 	public String username;
 	public String keyword;

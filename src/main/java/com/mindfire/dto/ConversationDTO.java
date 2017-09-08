@@ -1,6 +1,8 @@
 package com.mindfire.dto;
 
-/**
+/*
+ * ConversationDTO.java
+ * 
  * Used for receiving details of conversation of which user needs the messages
  * @author
  *

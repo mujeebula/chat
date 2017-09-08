@@ -1,6 +1,8 @@
 package com.mindfire.dto;
 
-/**
+/*
+ * MessageDTO.java
+ * 
  * It is used to receive the message details sent by the user
  * @author
  *

@@ -1,5 +1,7 @@
 package com.mindfire.dto;
-/**
+/*
+ * KeywordDTO.java
+ * 
  * DTO to get the details of search keyword
  * @author
  *

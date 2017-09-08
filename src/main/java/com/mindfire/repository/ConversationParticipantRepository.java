@@ -6,7 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.mindfire.entity.ConversationParticipant;
 
-/**
+/*
+ * ConversationParticipantRepository.java
+ * 
  * Repository for ConversationParticipant entity
  * @author
  *

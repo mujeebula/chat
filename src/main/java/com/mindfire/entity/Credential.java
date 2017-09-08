@@ -6,7 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
+/*
+ * Credential.java
+ * 
  * User credential storing entity 
  * @author
  *

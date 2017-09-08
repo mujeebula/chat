@@ -10,7 +10,9 @@ import org.springframework.stereotype.Repository;
 
 import com.mindfire.dto.ConversationIdAndNameDTO;
 
-/**
+/*
+ * ConversationIdAndNameDAO.java
+ * 
  * A Data Access Object to retrieve the result of the custom query.
  * @author
  *
@@ -43,16 +45,25 @@ public class ConversationIdAndNameDAO {
 		this.entityManager = entityManager;
 	}
 
+	/**
+	 * It returns all the conversationId and corresponding name of the conversation
+	 * for a user
+	 * 
+	 * @param userId
+	 * @return
+	 */
 	public List<ConversationIdAndNameDTO> getAll(Long userId) {
-		if (entityManager != null) {
-			Query query = entityManager.createNativeQuery(QUERY, "ConversationIdAndNameQuery");
-			query.setParameter(1, userId);
-			List<ConversationIdAndNameDTO> list = (List<ConversationIdAndNameDTO>) query.getResultList();
-			System.out.println(list);
-			return list;
-		}else {
-			System.out.println("Entity manager null");
-			return null;
+		try {
+			if (entityManager != null) {
+				Query query = entityManager.createNativeQuery(QUERY, "ConversationIdAndNameQuery");
+				query.setParameter(1, userId);
+				List<ConversationIdAndNameDTO> list = (List<ConversationIdAndNameDTO>) query.getResultList();
+				return list;
+			} else {
+				return null;
+			}
+		} catch (Exception ex) {
+			throw ex;
 		}
 	}
 

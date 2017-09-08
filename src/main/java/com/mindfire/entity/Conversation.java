@@ -5,7 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
+/*
+ * Conversation.java
+ * 
  * An entity which stores the detail of the conversation
  * @author
  *

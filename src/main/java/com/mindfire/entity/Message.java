@@ -15,7 +15,9 @@ import javax.persistence.TemporalType;
 
 import com.mindfire.dto.ConversationMessageDTO;
 
-/**
+/*
+ * Message.java
+ * 
  * Entity for messages exchanged among all users
  * @author
  *

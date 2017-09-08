@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import com.mindfire.entity.User;
 
-/**
+/*
+ * UserRepository.java
+ * 
  * Repository for User details
  * @author
  *
@@ -16,6 +18,5 @@ import com.mindfire.entity.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	User findByUsername(String username);
-
 	List<User> findByUsernameContaining(String keyword);
 }

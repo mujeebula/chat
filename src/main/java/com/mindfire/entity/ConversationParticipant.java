@@ -5,7 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
+/*
+ * ConversationParticipant.java
+ * 
  * Mapping table used to store the detail of users involved in a particular conversation
  * @author
  *

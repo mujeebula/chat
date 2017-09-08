@@ -8,7 +8,9 @@ import org.springframework.stereotype.Repository;
 import com.mindfire.entity.Conversation;
 import com.mindfire.entity.Message;
 
-/**
+/*
+ * ConversationRepository.java
+ * 
  * Repository for Conversation Entity
  * @author
  *
